@@ -40,7 +40,7 @@ namespace AdvWebFinal.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(TASKS task)
+        public async Task<IActionResult> Create(Tasks task)
         {
             _context.Tasks.Add(task);
             await _context.SaveChangesAsync();
@@ -48,7 +48,7 @@ namespace AdvWebFinal.Server.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, TASKS updated)
+        public async Task<IActionResult> Update(int id, Tasks updated)
         {
             var task = await _context.Tasks.FindAsync(id);
             if (task == null) return NotFound();
