@@ -31,7 +31,7 @@ namespace AdvWebFinal.Server.Controllers
             if (_context.Users.Any(u => u.Username == dto.Username))
                 return BadRequest("Username already taken.");
 
-            var user = new USERS
+            var user = new Users
             {
                 Username = dto.Username,
                 Email = dto.Email,
@@ -57,7 +57,7 @@ namespace AdvWebFinal.Server.Controllers
             return Ok(new { token });
         }
 
-        private string GenerateJwtToken(USERS user)
+        private string GenerateJwtToken(Users user)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
