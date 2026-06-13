@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace AdvWebFinal.Server.Models
 {
-    public class PROJECTS
+    public class Projects
     {
         [Key]
         public int ProjectId { get; set; }
