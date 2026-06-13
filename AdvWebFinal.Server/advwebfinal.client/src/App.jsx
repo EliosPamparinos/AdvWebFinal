@@ -1,10 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Navbar from './components/Navbar';
-import Projects from './pages/Projects';
-import ProtectedRoute from './components/ProtectedRoute';
-import Tasks from './pages/Tasks';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import Navbar from './Components/Navbar';
+import Projects from './Pages/Projects';
+import ProtectedRoute from './Pomponents/ProtectedRoute';
+import Tasks from './Pages/Tasks';
 
 const App = () => {
     return (
