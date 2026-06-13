@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../Context/AuthContext';
-import api from '../Services/api';
+import api from '../Services/Api';
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
