@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="advwebfinal.client/advwebfinal.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="AdvWebFinal.Server/AdvWebFinal.Server.csproj" />
+</Solution>
