@@ -14,6 +14,6 @@ namespace AdvWebFinal.Server.Models
         public int UserId { get; set; }
 
         [JsonIgnore]
-        public USERS? User { get; set; }
+        public Users? User { get; set; }
     }
 }
