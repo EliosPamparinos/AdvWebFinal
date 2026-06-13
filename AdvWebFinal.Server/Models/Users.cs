@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AdvWebFinal.Server.Models
 {
-    public class USERS
+    public class Users
     {
         [Key]
         [Column("UserID")]
