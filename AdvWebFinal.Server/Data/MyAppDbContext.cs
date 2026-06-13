@@ -7,19 +7,19 @@ namespace AdvWebFinal.Server.Data
     {
         public MyAppDbContext(DbContextOptions<MyAppDbContext> options) : base(options) { }
 
-        public DbSet<USERS> Users { get; set; }
-        public DbSet<PROJECTS> Projects { get; set; }
-        public DbSet<TASKS> Tasks { get; set; }
+        public DbSet<Users> Users { get; set; }
+        public DbSet<Projects> Projects { get; set; }
+        public DbSet<Tasks> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PROJECTS>()
+            modelBuilder.Entity<Projects>()
                 .HasOne(p => p.User)
                 .WithMany()
                 .HasForeignKey(p => p.UserId)
                 .HasPrincipalKey(u => u.UserID);
 
-            modelBuilder.Entity<TASKS>()
+            modelBuilder.Entity<Tasks>()
                 .HasOne(t => t.User)
                 .WithMany()
                 .HasForeignKey(t => t.UserId)
