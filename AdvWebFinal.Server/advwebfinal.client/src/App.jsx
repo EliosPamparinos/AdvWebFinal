@@ -3,7 +3,7 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Navbar from './Components/Navbar';
 import Projects from './Pages/Projects';
-import ProtectedRoute from './Pomponents/ProtectedRoute';
+import ProtectedRoute from './Components/ProtectedRoute';
 import Tasks from './Pages/Tasks';
 
 const App = () => {
