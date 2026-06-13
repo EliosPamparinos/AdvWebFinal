@@ -3,8 +3,11 @@ WORKDIR /app
 
 COPY . .
 
+RUN apt-get update && apt-get install -y curl && \
+    curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
+
 WORKDIR /app/AdvWebFinal.Server/advwebfinal.client
-RUN apt-get update && apt-get install -y nodejs npm
 RUN npm install
 RUN npm run build
 RUN cp -r dist ../wwwroot
