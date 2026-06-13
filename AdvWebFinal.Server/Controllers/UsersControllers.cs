@@ -34,7 +34,7 @@ namespace AdvWebFinal.Server.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, USERS updated)
+        public async Task<IActionResult> Update(int id, Users updated)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
