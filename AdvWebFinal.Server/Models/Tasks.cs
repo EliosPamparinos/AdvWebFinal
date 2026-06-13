@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace AdvWebFinal.Server.Models
 {
-    public class TASKS
+    public class Tasks
     {
         [Key]
         public int TaskId { get; set; }
@@ -13,10 +13,10 @@ namespace AdvWebFinal.Server.Models
 
         public int ProjectId { get; set; }
         [JsonIgnore]
-        public PROJECTS? Project { get; set; } = null!;
+        public Projects? Project { get; set; } = null!;
 
         public int UserId { get; set; }
         [JsonIgnore]
-        public USERS? User { get; set; } = null!;
+        public Users? User { get; set; } = null!;
     }
 }
